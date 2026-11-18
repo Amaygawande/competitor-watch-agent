@@ -1,0 +1,75 @@
+:root { --main: #6366f1; --dark: #1e1b4b; --bg: #f5f3ff; --text: #1f2937; --gray: #6b7280; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--text); }
+button { font-family: inherit; cursor: pointer; }
+
+/* Top banner */
+.hero { background: linear-gradient(135deg, #4f46e5, #9333ea); color: #fff; text-align: center; padding: 48px 16px 90px; }
+.hero h1 { margin: 0 0 8px; font-size: 34px; }
+.hero p { margin: 0; opacity: .9; }
+
+/* Page area */
+.page { max-width: 800px; margin: -60px auto 0; padding: 0 16px 60px; }
+.title { margin: 28px 0 12px; font-size: 20px; }
+.empty { color: var(--gray); }
+
+/* Search box */
+.box { background: #fff; padding: 22px; border-radius: 16px; box-shadow: 0 8px 24px rgba(79,70,229,.15); }
+.label { display: block; font-weight: 600; margin-bottom: 10px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; min-height: 36px; margin-bottom: 12px; align-items: center; }
+.tag { background: #eef2ff; color: #4338ca; padding: 6px 12px; border-radius: 999px; font-size: 14px; font-weight: 500; }
+.tag button { border: 0; background: none; color: #4338ca; font-size: 16px; padding: 0 0 0 4px; }
+.hint { color: var(--gray); font-size: 14px; }
+.row { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
+input { flex: 1; min-width: 200px; padding: 12px 14px; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 15px; }
+input:focus { outline: none; border-color: var(--main); }
+.btn { padding: 12px 22px; border: 0; border-radius: 10px; font-size: 15px; font-weight: 600; }
+.btn.main { background: var(--main); color: #fff; }
+.btn.main:hover:not(:disabled) { background: #4f46e5; }
+.btn.main:disabled { background: #c7d2fe; cursor: not-allowed; }
+.btn.light { background: #eef2ff; color: #4338ca; }
+.btn.link { background: none; color: var(--main); padding: 12px 8px; }
+
+/* Error and loading */
+.error { margin-top: 16px; padding: 14px; background: #fee2e2; color: #991b1b; border-radius: 10px; }
+.loading { text-align: center; background: #fff; margin-top: 20px; padding: 30px; border-radius: 16px; }
+.loading p { margin: 12px 0 4px; font-weight: 600; }
+.loading small { color: var(--gray); }
+.spinner { width: 40px; height: 40px; margin: auto; border: 4px solid #e0e7ff; border-top-color: var(--main); border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Brief */
+.brief { margin-top: 24px; background: var(--dark); color: #e0e7ff; padding: 22px; border-radius: 16px; }
+.brief h2 { margin: 0 0 4px; color: #fff; }
+.brief small { color: #a5b4fc; }
+.brief p { line-height: 1.6; margin: 10px 0 0; }
+.brief strong { color: #fff; }
+
+/* Filters */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.filters button { padding: 8px 14px; border: 2px solid #e5e7eb; background: #fff; border-radius: 999px; font-size: 14px; }
+.filters button span { background: #f3f4f6; border-radius: 999px; padding: 1px 8px; margin-left: 4px; font-size: 12px; }
+.filters button.active { background: var(--main); color: #fff; border-color: var(--main); }
+.filters button.active span { background: rgba(255,255,255,.25); }
+
+/* Update cards */
+.card { background: #fff; padding: 16px 18px; border-radius: 14px; margin-bottom: 12px; border-left: 5px solid var(--main); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+.card-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.stars { margin-left: auto; color: #f59e0b; letter-spacing: 1px; }
+.summary { margin: 10px 0; line-height: 1.5; }
+.card-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+.card-bottom small { color: var(--gray); }
+.card-bottom a { color: var(--main); font-weight: 600; text-decoration: none; }
+.badge { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; color: #fff; }
+.badge.Product { background: #2563eb; }
+.badge.Pricing { background: #d97706; }
+.badge.Hiring { background: #059669; }
+.badge.Partnership { background: #7c3aed; }
+.badge.Funding { background: #db2777; }
+.badge.Other { background: #6b7280; }
+
+/* Past reports */
+.past button { display: flex; justify-content: space-between; gap: 10px; width: 100%; text-align: left; padding: 12px 14px; margin-bottom: 8px; background: #fff; border: 2px solid #ede9fe; border-radius: 10px; }
+.past button:hover { border-color: var(--main); }
+.past small { color: var(--gray); white-space: nowrap; }
+@media (max-width: 500px) { .stars { margin-left: 0; } .past button { flex-direction: column; } }
