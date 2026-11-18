@@ -18,7 +18,7 @@ const parser = new Parser({ customFields: { item: ["source"] } });
 // Models to try in order: main model first, then a lighter backup
 const MODELS = [
   process.env.GEMINI_MODEL || "gemini-2.5-flash",
-  process.env.GEMINI_FALLBACK_MODEL || "gemini-2.5-flash-lite",
+  process.env.GEMINI_FALLBACK_MODEL || "gemini-3.5-flash-lite",
 ];
 
 // ---------- Database ----------
