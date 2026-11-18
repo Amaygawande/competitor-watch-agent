@@ -1,8 +1,7 @@
 // All backend calls live here
 import axios from "axios";
 
-// Local: empty (Vite proxy handles /api). Vercel: set VITE_API_URL to your backend URL
-const BASE = import.meta.env.VITE_API_URL || "";
+const BASE = (import.meta.env.VITE_API_URL || "").replace(/\/+$/, "");
 
 // Run the competitor watch for a list of company names
 export async function runWatch(companies) {
